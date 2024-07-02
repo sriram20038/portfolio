@@ -212,5 +212,203 @@ section {
     margin-bottom: 5px;
 }
 
+/*certification section*/
 
+#certifications {
+    background: #111;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+#certifications h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap; /* Ensure courses wrap to new line on smaller screens */
+    justify-content: center;
+    gap: 20px; /* Adjust spacing between courses */
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.course {
+    flex: 1 1 200px; /* Allow courses to grow up to 200px width, but adapt to smaller screens */
+    max-width: 300px; /* Limit maximum width of each course item */
+    text-align: center;
+}
+
+.course p {
+    font-size: 16px;
+    color: #ddd;
+    font-weight: 600;
+}
+
+.course img {
+    max-width:250px; /* Ensure images resize proportionally */
+
+    margin-bottom: 10px;
+    border: 2px solid #1abc9c;
+}
+
+.category h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e67e22;
+}
+
+/* Mobile-first approach */
+@media (max-width: 768px) {
+    #certifications {
+        padding: 20px;
+    }
+
+    .courses {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course {
+        width: 100%; /* Take full width */
+        max-width: 100%; /* Ensure courses don't exceed screen width */
+        margin-bottom: 20px;
+    }
+
+    .course img {
+        max-width: 80%; /* Adjust image size for smaller screens */
+    }
+}
+
+/* Adjustments for tablets and larger screens */
+@media (min-width: 769px) {
+    .courses {
+        justify-content: space-around;
+    }
+
+    .course {
+        width: calc(50% - 20px); /* Two columns with margin */
+        max-width: none;
+    }
+}
+
+
+/* Contact Section Styles */
+#contact {
+    background: #111;
+    padding: 40px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: #1abc9c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.contact-info img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.contact-info img:hover {
+    transform: scale(1.1);
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact label {
+    text-align: left;
+    font-weight: bold;
+    color: #555;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contact button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact button:hover {
+    background-color: #16a085;
+}
+
+.cv-download {
+    margin-top: 60px;
+}
+
+.cv-download button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cv-download button:hover {
+    background-color: #16a085;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact {
+        padding: 20px 10px;
+    }
+
+    #contact form {
+        padding: 0 20px;
+    }
+
+    .contact-info img {
+        width: 40px;
+        height: 40px;
+    }
+}
 
