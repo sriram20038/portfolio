@@ -15,7 +15,6 @@
             <a href="#about">About</a>
             <a href="#education">Education</a>
             <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
             <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -225,10 +224,6 @@
                         <a href="https://www.sololearn.com/certificates/CC-WHTRPFTM" target="_blank"><img src="images/certificates/c-language.png" alt="c basic"></a>
                         <p>Introduction to C language</p>
                     </div> 
-                    <div class="course">
-                       <a><img src="images/C++.jpg" alt="python"></a>
-                       <p>C Intermediate</p>
-                    </div>
                    
                  </div>
 
@@ -250,9 +245,6 @@
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muggulladharanisaisriram@gmail.com&su=Hello%20SriRam&body=Hi%20SriRam," target="_blank">
                     <img src="images/gmail.webp" alt="Email">
                 </a>
-                
-                
-                </a>
                 <a href="https://www.linkedin.com/in/muggulladharanisaisriram/" target="_blank">
                     <img src="images/linkedin.webp" alt="LinkedIn">
                 </a>
@@ -260,25 +252,37 @@
                     <img src="images/github.png" alt="GitHub">
                 </a>
             </div>
-            <form>
+            <form name="submit-to-google-sheet">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="Name" required>
         
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="Email" required>
         
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="Message" rows="5" required></textarea>
         
-                <button type="submit">Send Message</button>
+                <button type="submit" id="submit-btn">Send Message</button>
             </form>
             <div class="cv-download">
-                <a href="CV.pdf" download="SriRam_CV.pdf">
+                <a href="resume.pdf" download="SriRam_CV.pdf">
                     <button type="button">Download CV</button>
                 </a>
             </div>
-        </section>
-        
+            
+            
+            <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyoJo6mzziTEz5o6lsYgNrN3I7qofbOOf9-h2Rowhy26-bUydGlO0B4199zuPn_uijk/exec'
+                const form = document.forms['submit-to-google-sheet']
+            
+                form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                        .then(response => console.log('Success!', response))
+                        .catch(error => console.error('Error!', error.message))
+                })
+            </script>
+            
         
     </main>
 </body>

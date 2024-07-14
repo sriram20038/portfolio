@@ -376,7 +376,10 @@ section {
 #contact button:hover {
     background-color: #16a085;
 }
-
+#contact button:active{
+    background-color: #0c4f41;
+    transition: background-color 0.3s;
+}
 .cv-download {
     margin-top: 60px;
 }
